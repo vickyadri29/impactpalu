@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Link } from "react-scroll";
 // Import Image and Icon
 import imageFrame from "../assets/header/imageFrame.svg";
 import scrollDownIcon from "../assets/header/scrollDownIcon.svg";
@@ -27,10 +28,12 @@ const HeaderContent = () => {
               />
             </div>
           </div>
-          <button className="flex items-center gap-1 mt-10">
-            <Image src={scrollDownIcon} alt="scroll down icon" />
-            <p className="text-white">scroll down to explore</p>
-          </button>
+          <Link to="about" smooth={true} duration={500}>
+            <button className="flex items-center gap-1 mt-10">
+              <Image src={scrollDownIcon} alt="scroll down icon" />
+              <p className="text-white">scroll down to explore</p>
+            </button>
+          </Link>
         </div>
       </div>
       <Image src={waveHeader} alt="wave header" />

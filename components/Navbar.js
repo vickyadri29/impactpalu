@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { Link } from "react-scroll";
+
 import { useEffect, useState } from "react";
 
 // Import Icon
@@ -10,11 +12,13 @@ const Navbar = () => {
   const styleNavbar = scroll
     ? {
         // When scrolled
-        background: "fixed left-0 right-0 m-auto z-10 bg-[#008FA2] transition-all ease-out duration-100 drop-shadow-md",
+        background:
+          "fixed left-0 right-0 m-auto z-10 bg-[#008FA2] transition-all ease-out duration-100 drop-shadow-md",
       }
     : {
         // When at top
-        background: "fixed left-0 right-0 m-auto z-10 bg-transparent transition-all ease-out duration-100 drop-shadow-md",
+        background:
+          "fixed left-0 right-0 m-auto z-10 bg-transparent transition-all ease-out duration-100 drop-shadow-md",
       };
 
   const changeBgNav = () => {
@@ -27,20 +31,20 @@ const Navbar = () => {
 
   useEffect(() => {
     changeBgNav();
-    window.addEventListener('scroll', changeBgNav)
-  }, [])
+    window.addEventListener("scroll", changeBgNav);
+  }, []);
 
   return (
-    <section
-      className={styleNavbar.background}
-    >
+    <section className={styleNavbar.background}>
       <div className="max-w-6xl m-auto">
         <nav className="flex justify-between items-center p-5">
           <Image src={logo} alt="logo" />
 
           <div className="flex items-center">
             <ul className="flex gap-10 text-white font-medium">
-              <li className="cursor-pointer hover:text-blue-50">About</li>
+              <Link to="about" smooth={true} duration={500}>
+                <li className="cursor-pointer hover:text-blue-50">About</li>
+              </Link>
               <li className="cursor-pointer hover:text-blue-50">Programs</li>
               <li className="cursor-pointer hover:text-blue-50">Partner</li>
               <li className="cursor-pointer hover:text-blue-50">Events</li>
