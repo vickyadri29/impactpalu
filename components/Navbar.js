@@ -1,11 +1,39 @@
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 // Import Icon
 import logo from "../assets/navbar/logo.svg";
 
 const Navbar = () => {
+  const [scroll, setScroll] = useState(false);
+
+  const styleNavbar = scroll
+    ? {
+        // When scrolled
+        background: "fixed left-0 right-0 m-auto z-10 bg-[#008FA2] transition-all ease-out duration-100 drop-shadow-md",
+      }
+    : {
+        // When at top
+        background: "fixed left-0 right-0 m-auto z-10 bg-transparent transition-all ease-out duration-100 drop-shadow-md",
+      };
+
+  const changeBgNav = () => {
+    if (window.scrollY >= 50) {
+      setScroll(true);
+    } else {
+      setScroll(false);
+    }
+  };
+
+  useEffect(() => {
+    changeBgNav();
+    window.addEventListener('scroll', changeBgNav)
+  }, [])
+
   return (
-    <section className="sticky top-0 z-10">
+    <section
+      className={styleNavbar.background}
+    >
       <div className="max-w-6xl m-auto">
         <nav className="flex justify-between items-center p-5">
           <Image src={logo} alt="logo" />
