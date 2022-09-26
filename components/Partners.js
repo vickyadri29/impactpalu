@@ -62,10 +62,10 @@ const Partners = () => {
             className="testimoniSlider transition-all min-h-[170px]"
           >
             {datas.map((data, index) => {
-              const { image_url, id } = data;
+              const { image_url } = data;
               return (
                 <SwiperSlide key={index}>
-                  <div key={id} className="flex justify-center">
+                  <div className="flex justify-center">
                     <Image
                       src={image_url}
                       alt="Partners"
