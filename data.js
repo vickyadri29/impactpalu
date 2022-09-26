@@ -2,6 +2,16 @@
 const imageUrl1 = require("./assets/events/event1.png");
 const imageUrl2 = require("./assets/events/event2.png");
 
+// Data Partners
+const ygap = require("./assets/partners/ygap.png");
+const technasia = require("./assets/partners/technasia.png");
+const unltd = require("./assets/partners/unltd.png");
+const plus = require("./assets/partners/plus.png");
+const satutampa = require("./assets/partners/satutampa.png");
+const nobalu = require("./assets/partners/nobalu.png");
+const gammawasts = require("./assets/partners/gammawasts.png");
+const dekopin = require("./assets/partners/dekopin.png");
+
 export const DataEvents = {
   datas: [
     {
@@ -27,3 +37,39 @@ export const DataEvents = {
   ],
 };
 
+export const DataPartners = {
+  datas: [
+    {
+      id: 1,
+      image_url: ygap,
+    },
+    {
+      id: 2,
+      image_url: technasia,
+    },
+    {
+      id: 3,
+      image_url: unltd,
+    },
+    {
+      id: 4,
+      image_url: plus,
+    },
+    {
+      id: 5,
+      image_url: satutampa,
+    },
+    {
+      id: 6,
+      image_url: nobalu,
+    },
+    {
+      id: 7,
+      image_url: gammawasts,
+    },
+    {
+      id: 8,
+      image_url: dekopin,
+    },
+  ],
+};

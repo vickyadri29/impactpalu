@@ -14,7 +14,7 @@ const Events = () => {
 
   const { datas } = DataEvents;
   return (
-    <section className="bg-[#F9FFFF]">
+    <section className="events bg-[#F9FFFF]">
       <div className="max-w-6xl m-auto p-5">
         <div className="flex justify-center gap-3">
           <Image src={pointerLeft} alt="pointer left" width={20} />
@@ -35,7 +35,7 @@ const Events = () => {
             return (
               <div className="border flex justify-between text-[#2A2B30]">
                 <Image src={image_url} alt="Events" width={300} height={300} />
-                <div className="flex flex-col justify-between p-5">
+                <div key={index} className="flex flex-col justify-between p-5">
                   <div className="flex flex-col gap-2">
                     <h2 className="text-[#E0720C] font-semibold md:text-3xl">
                       {title}

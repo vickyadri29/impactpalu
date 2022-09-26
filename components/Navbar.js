@@ -38,17 +38,27 @@ const Navbar = () => {
     <section className={styleNavbar.background}>
       <div className="max-w-6xl m-auto">
         <nav className="flex justify-between items-center p-5">
-          <Image src={logo} alt="logo" />
+          <Link to="/" smooth={true} duration={500}>
+            <Image src={logo} alt="logo" className="cursor-pointer"/>
+          </Link>
 
           <div className="flex items-center">
             <ul className="flex gap-10 text-white font-medium">
               <Link to="about" smooth={true} duration={500}>
                 <li className="cursor-pointer hover:text-blue-50">About</li>
               </Link>
-              <li className="cursor-pointer hover:text-blue-50">Programs</li>
-              <li className="cursor-pointer hover:text-blue-50">Partner</li>
-              <li className="cursor-pointer hover:text-blue-50">Events</li>
-              <li className="cursor-pointer hover:text-blue-50">Contact</li>
+              <Link to="programs" smooth={true} duration={500}>
+                <li className="cursor-pointer hover:text-blue-50">Programs</li>
+              </Link>
+              <Link to="events" smooth={true} duration={500}>
+                <li className="cursor-pointer hover:text-blue-50">Events</li>
+              </Link>
+              <Link to="partners" smooth={true} duration={500}>
+                <li className="cursor-pointer hover:text-blue-50">Partners</li>
+              </Link>
+              <Link to="contact" smooth={true} duration={500}>
+                <li className="cursor-pointer hover:text-blue-50">Contact</li>
+              </Link>
             </ul>
           </div>
           <button className="bg-white hover:bg-[#f8f8f8] px-6 py-3 text-[#046F7D] font-medium hover:shadow-md transition-all duration-200 ease-in">

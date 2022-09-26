@@ -10,6 +10,8 @@ import HeaderContent from "../components/HeaderContent";
 import Programs from "../components/Programs";
 import IpImages from "../components/IpImages";
 import Events from "../components/Events";
+import Partners from "../components/Partners";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -24,6 +26,8 @@ export default function Home() {
         <Programs />
         <IpImages />
         <Events />
+        <Partners />
+        <Footer />
       </div>
     </>
   );

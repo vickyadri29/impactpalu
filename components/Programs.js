@@ -25,7 +25,7 @@ const Programs = () => {
   };
 
   return (
-    <section className="">
+    <section className="programs">
       <div className="relative top-2">
         <Image src={waveProgram} alt="wave" />
       </div>
