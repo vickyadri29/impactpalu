@@ -20,7 +20,9 @@ const IpImages = () => {
           <Image src={img3} alt="img3" />
         </div>
       </div>
-      <Image src={waveIpImages2} alt="wave 2" />
+      <div className="relative top-2">
+        <Image src={waveIpImages2} alt="wave 2" />
+      </div>
     </section>
   );
 };

@@ -51,7 +51,7 @@ const Navbar = () => {
               <li className="cursor-pointer hover:text-blue-50">Contact</li>
             </ul>
           </div>
-          <button className="bg-white px-6 py-3 text-[#046F7D] font-medium hover:shadow-md transition-all duration-200 ease-in">
+          <button className="bg-white hover:bg-[#f8f8f8] px-6 py-3 text-[#046F7D] font-medium hover:shadow-md transition-all duration-200 ease-in">
             Apply Now
           </button>
         </nav>

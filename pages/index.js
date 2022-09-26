@@ -9,6 +9,7 @@ import About from "../components/About";
 import HeaderContent from "../components/HeaderContent";
 import Programs from "../components/Programs";
 import IpImages from "../components/IpImages";
+import Events from "../components/Events";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <About />
         <Programs />
         <IpImages />
+        <Events />
       </div>
     </>
   );
