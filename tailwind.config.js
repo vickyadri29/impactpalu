@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        ipImage: 'url("https://i.postimg.cc/zGJmMvBv/bg.png")',
+      },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },
