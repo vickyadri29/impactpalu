@@ -33,9 +33,9 @@ const Events = () => {
               register_desc,
             } = data;
             return (
-              <div className="border flex justify-between text-[#2A2B30]">
+              <div key={index} className="border flex justify-between text-[#2A2B30]">
                 <Image src={image_url} alt="Events" width={300} height={300} />
-                <div key={index} className="flex flex-col justify-between p-5">
+                <div className="flex flex-col justify-between p-5">
                   <div className="flex flex-col gap-2">
                     <h2 className="text-[#E0720C] font-semibold md:text-3xl">
                       {title}

@@ -38,7 +38,7 @@ const Navbar = () => {
     <section className={styleNavbar.background}>
       <div className="max-w-6xl m-auto">
         <nav className="flex justify-between items-center p-5">
-          <Link to="/" smooth={true} duration={500}>
+          <Link to="" smooth={true} duration={500}>
             <Image src={logo} alt="logo" className="cursor-pointer"/>
           </Link>
 
