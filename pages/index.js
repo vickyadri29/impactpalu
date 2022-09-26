@@ -7,6 +7,7 @@ import styles from "../styles/Home.module.css";
 import Navbar from "../components/Navbar";
 import About from "../components/About";
 import HeaderContent from "../components/HeaderContent";
+import Programs from "../components/Programs";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <Navbar />
         <HeaderContent />
         <About />
+        <Programs />
       </div>
     </>
   );
