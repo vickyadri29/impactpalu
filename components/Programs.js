@@ -5,7 +5,6 @@ import Image from "next/image";
 import pointerLeft from "../assets/pointerLeft.svg";
 import pointerRight from "../assets/pointerRight.svg";
 import waveProgram from "../assets/programs/waveProgram.svg";
-import waveProgram2 from "../assets/programs/waveProgram2.svg";
 import capacity from "../assets/programs/capacity.svg";
 import entrepreneur from "../assets/programs/entrepreneur.svg";
 import personalDev from "../assets/programs/personalDev.svg";
@@ -31,7 +30,7 @@ const Programs = () => {
         <Image src={waveProgram} alt="wave" />
       </div>
       <div className="bg-[#ECFEFF] text-[#2A2B30]">
-        <div className="max-w-6xl m-auto px-5 ">
+        <div className="max-w-6xl m-auto px-5">
           <div className="flex justify-center gap-3">
             <Image src={pointerLeft} alt="pointer left" width={20} />
             <h2 className="font-semibold text-[45px] text-[#046F7D]">
@@ -125,9 +124,6 @@ const Programs = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div>
-        <Image src={waveProgram2} alt="wave program 2" />
       </div>
     </section>
   );

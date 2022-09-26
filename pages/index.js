@@ -8,6 +8,7 @@ import Navbar from "../components/Navbar";
 import About from "../components/About";
 import HeaderContent from "../components/HeaderContent";
 import Programs from "../components/Programs";
+import IpImages from "../components/IpImages";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <HeaderContent />
         <About />
         <Programs />
+        <IpImages />
       </div>
     </>
   );
