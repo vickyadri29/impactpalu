@@ -30,9 +30,11 @@ const HeaderContent = () => {
             </div>
           </div>
           <Link to="about" smooth={true} duration={500}>
-            <button className="flex items-center m-auto gap-1 mt-10">
+            <button className="flex md:items-center md:m-0 m-auto gap-1 mt-10">
               <Image src={scrollDownIcon} alt="scroll down icon" />
-              <p className="text-white md:text-base text-xs">scroll down to explore</p>
+              <p className="text-white md:text-base text-xs">
+                scroll down to explore
+              </p>
             </button>
           </Link>
         </div>
