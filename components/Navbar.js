@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Link } from "react-scroll";
+import { CgMenuRight, CgClose } from "react-icons/cg";
 
 import { useEffect, useState } from "react";
 
@@ -8,6 +9,7 @@ import logo from "../assets/navbar/logo.svg";
 
 const Navbar = () => {
   const [scroll, setScroll] = useState(false);
+  const [openNav, setOpenNav] = useState(false);
 
   const styleNavbar = scroll
     ? {
@@ -29,6 +31,10 @@ const Navbar = () => {
     }
   };
 
+  const handleOpenNav = () => {
+    setOpenNav((show) => !show);
+  };
+
   useEffect(() => {
     changeBgNav();
     window.addEventListener("scroll", changeBgNav);
@@ -39,31 +45,102 @@ const Navbar = () => {
       <div className="max-w-6xl m-auto">
         <nav className="flex justify-between items-center p-5">
           <Link to="" smooth={true} duration={500}>
-            <Image src={logo} alt="logo" className="cursor-pointer"/>
+            <div className="md:w-[100px] w-[25px]">
+              <Image src={logo} alt="logo" className="cursor-pointer" />
+            </div>
           </Link>
-
-          <div className="flex items-center">
-            <ul className="flex gap-10 text-white font-medium">
-              <Link to="about" smooth={true} duration={500}>
-                <li className="cursor-pointer hover:text-blue-50">About</li>
-              </Link>
-              <Link to="programs" smooth={true} duration={500}>
-                <li className="cursor-pointer hover:text-blue-50">Programs</li>
-              </Link>
-              <Link to="events" smooth={true} duration={500}>
-                <li className="cursor-pointer hover:text-blue-50">Events</li>
-              </Link>
-              <Link to="partners" smooth={true} duration={500}>
-                <li className="cursor-pointer hover:text-blue-50">Partners</li>
-              </Link>
-              <Link to="contact" smooth={true} duration={500}>
-                <li className="cursor-pointer hover:text-blue-50">Contact</li>
-              </Link>
-            </ul>
+          {/* Nav Dekstop */}
+          <div className="md:flex hidden gap-10">
+            <div className="flex items-center">
+              <ul className="flex gap-10 text-white font-medium">
+                <Link to="about" smooth={true} duration={500}>
+                  <li className="cursor-pointer hover:text-blue-50">About</li>
+                </Link>
+                <Link to="programs" smooth={true} duration={500}>
+                  <li className="cursor-pointer hover:text-blue-50">
+                    Programs
+                  </li>
+                </Link>
+                <Link to="events" smooth={true} duration={500}>
+                  <li className="cursor-pointer hover:text-blue-50">Events</li>
+                </Link>
+                <Link to="partners" smooth={true} duration={500}>
+                  <li className="cursor-pointer hover:text-blue-50">
+                    Partners
+                  </li>
+                </Link>
+                <Link to="contact" smooth={true} duration={500}>
+                  <li className="cursor-pointer hover:text-blue-50">Contact</li>
+                </Link>
+              </ul>
+            </div>
+            <button className="bg-white hover:bg-[#f8f8f8] px-6 py-3 text-[#046F7D] font-medium hover:shadow-md transition-all duration-200 ease-in">
+              Apply Now
+            </button>
           </div>
-          <button className="bg-white hover:bg-[#f8f8f8] px-6 py-3 text-[#046F7D] font-medium hover:shadow-md transition-all duration-200 ease-in">
-            Apply Now
-          </button>
+          {/* Nav Mobile */}
+          <div
+            className="md:hidden absolute right-0 mx-5 text-white"
+            onClick={handleOpenNav}
+          >
+            {openNav ? <CgClose size={30} /> : <CgMenuRight size={30} />}
+            <div
+              className={`${
+                openNav ? "left-0" : "-left-full"
+              }  fixed bottom-0 w-full max-w-[200px] h-full transition-all duration-500 ease-out`}
+            >
+              <div className="h-screen bg-white flex flex-col items-center justify-center gap-10">
+                <ul className="flex flex-col gap-10 text-black font-medium">
+                  <Link to="about" smooth={true} duration={500}>
+                    <li
+                      onClick={handleOpenNav}
+                      className="cursor-pointer  focus:border-b-2 focus:border-b-black hover:text-blue-50"
+                    >
+                      About
+                    </li>
+                  </Link>
+                  <Link to="programs" smooth={true} duration={500}>
+                    <li
+                      onClick={handleOpenNav}
+                      className="cursor-pointer hover:text-blue-50"
+                    >
+                      Programs
+                    </li>
+                  </Link>
+                  <Link to="events" smooth={true} duration={500}>
+                    <li
+                      onClick={handleOpenNav}
+                      className="cursor-pointer hover:text-blue-50"
+                    >
+                      Events
+                    </li>
+                  </Link>
+                  <Link to="partners" smooth={true} duration={500}>
+                    <li
+                      onClick={handleOpenNav}
+                      className="cursor-pointer hover:text-blue-50"
+                    >
+                      Partners
+                    </li>
+                  </Link>
+                  <Link to="contact" smooth={true} duration={500}>
+                    <li
+                      onClick={handleOpenNav}
+                      className="cursor-pointer hover:text-blue-50"
+                    >
+                      Contact
+                    </li>
+                  </Link>
+                </ul>
+                <button
+                  onClick={handleOpenNav}
+                  className="bg-white hover:bg-[#f8f8f8] px-6 py-3 text-[#046F7D] font-medium hover:shadow-md transition-all duration-200 ease-in"
+                >
+                  Apply Now
+                </button>
+              </div>
+            </div>
+          </div>
         </nav>
       </div>
     </section>

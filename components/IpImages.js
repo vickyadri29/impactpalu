@@ -12,8 +12,8 @@ const IpImages = () => {
     <section className="relative bg-ipImage h-full">
       <Image src={waveIpImages} alt="wave" />
       <div className="max-w-6xl m-auto p-5">
-        <div className="flex flex-col gap-8">
-          <div className="flex justify-between">
+        <div className="flex flex-col md:gap-8 gap-5">
+          <div className="flex gap-5 justify-between">
             <Image src={img1} alt="img1" />
             <Image src={img2} alt="img2" />
           </div>

@@ -10,15 +10,15 @@ const Footer = () => {
   return (
     <section className="contact bg-gradient-to-b from-[#E8FFFF] to-[#F9FFFF]">
       <div className="max-w-5xl m-auto p-5">
-        <div className="flex justify-between">
+        <div className="flex md:flex-row flex-col md:gap-0 gap-5 md:justify-between">
           <div>
             <Image src={logo1} alt="logo" />
           </div>
           <div className="flex flex-col gap-3">
-            <h3 className="text-[#046F7D] md:text-3xl font-semibold">
+            <h3 className="text-[#046F7D] md:text-3xl text-2xl font-semibold">
               Contact
             </h3>
-            <ul className="text-[#2A2B30]">
+            <ul className="text-[#2A2B30] md:text-base text-sm">
               <li>Mail: hello@impactpalu.id</li>
               <li>Phone: +62 813 9871 2212</li>
               <li>Address: Social Innovation Space at Dekopinwil</li>
@@ -27,7 +27,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="flex flex-col gap-3">
-            <h3 className="text-[#046F7D] md:text-3xl font-semibold">
+            <h3 className="text-[#046F7D] md:text-3xl text-2xl font-semibold">
               Social Media
             </h3>
             <div className="flex gap-3">
@@ -38,12 +38,16 @@ const Footer = () => {
         </div>
       </div>
       <hr />
-      <div className="flex justify-between items-center max-w-5xl m-auto py-3">
-        <p className="text-[#046F7D]">
-          Copyright 2022 © Impact Palu | Created by{" "}
-          <span className="font-semibold">HammerCode</span>
-        </p>
-        <Image src={logo2} alt="logo" />
+      <div className="max-w-5xl m-auto py-3 px-5">
+        <div className="flex justify-between items-center gap-5">
+          <p className="text-[#046F7D] md:text-base text-[10px]">
+            Copyright 2022 © Impact Palu | Created by{" "}
+            <span className="font-semibold">HammerCode</span>
+          </p>
+          <div className="md:w-20 w-10">
+            <Image src={logo2} alt="logo" />
+          </div>
+        </div>
       </div>
     </section>
   );

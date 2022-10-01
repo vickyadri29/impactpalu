@@ -23,12 +23,12 @@ const Partners = () => {
         <div className="flex flex-col gap-3">
           <div className="flex justify-center gap-3">
             <Image src={pointerLeft} alt="pointer left" width={20} />
-            <h2 className="font-semibold text-[45px] text-[#046F7D]">
+            <h2 className="font-semibold md:text-[45px] text-[28px] text-[#046F7D]">
               Partners
             </h2>
             <Image src={pointerRight} alt="pointer right" width={20} />
           </div>
-          <p className="text-[18px] text-center text-[#2A2B30]">
+          <p className="md:text-[18px] text-[13px] text-center text-[#2A2B30]">
             Here is our partners and supporters
           </p>
         </div>
@@ -45,11 +45,19 @@ const Partners = () => {
               300: {
                 slidesPerView: "auto",
                 spaceBetween: 30,
+                pagination: {
+                  clickable: "true",
+                  dynamicBullets: "true",
+                },
               },
               // when window width is >= 768px
               768: {
                 slidesPerView: "auto",
                 spaceBetween: 30,
+                pagination: {
+                  clickable: "true",
+                  dynamicBullets: "true",
+                },
               },
               1024: {
                 slidesPerView: "3",
@@ -59,7 +67,7 @@ const Partners = () => {
                 },
               },
             }}
-            className="testimoniSlider transition-all min-h-[170px]"
+            className="testimoniSlider transition-all md:min-h-[170px] min-h-[145px]"
           >
             {datas.map((data, index) => {
               const { image_url } = data;

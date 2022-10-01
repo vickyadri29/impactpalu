@@ -8,14 +8,14 @@ import aboutFrame from "../assets/about/aboutFrame.svg";
 const About = () => {
   return (
     <section className="about">
-      <div className="max-w-6xl m-auto px-5 pt-10">
+      <div className="max-w-6xl m-auto px-5 md:pt-10 pt-5">
         <div className="flex flex-col gap-5">
           <div className="flex justify-center gap-3">
             <Image src={pointerLeft} alt="pointer left" width={20} />
-            <h2 className="font-semibold text-[45px] text-[#046F7D]">About</h2>
+            <h2 className="font-semibold md:text-[45px] text-[28px] text-[#046F7D]">About</h2>
             <Image src={pointerRight} alt="pointer right" width={20} />
           </div>
-          <p className="text-[18px] text-center text-[#2A2B30]">
+          <p className="md:text-[18px] text-[13px] text-center text-[#2A2B30]">
             <span className="font-semibold">Impact Palu</span> is a local
             incubator aims to grow social entrepreneurship ecosystem in Central
             Sulawesi. We act as{" "}
@@ -26,21 +26,18 @@ const About = () => {
             social impact in eastern part of Indonesia.{" "}
           </p>
         </div>
-        <div className="flex flex-col items-center mt-12 gap-5 text-[#2A2B30]">
-          <h3 className="font-semibold text-[22px]">Why We Are Exist?</h3>
-          <p className="text-[18px] text-center">
-            <span className="font-semibold">In September 2018,</span> in Palu,
-            Central Sulawesi faced disasters{" "}
-            <span className="font-semibold">
-              (tsunami, earthquake, soil liquefaction)
-            </span>
-            . More than 2000 people killed, many buildings, roads, bridges and
-            other crucial infrastructures were destroyed. Currently, around
-            6,500+ refugees lost their home and jobs as well.
+        <div className="flex flex-col items-center md:mt-12 mt-7 gap-5 text-[#2A2B30]">
+          <h3 className="font-semibold md:text-[22px] text-[20px]">Why We Are Exist?</h3>
+          <p className="md:text-[18px] text-[13px] text-center">
+            At <span className="font-semibold">Impact Palu</span>, we believe that social enterprises will
+            develop a sustainable solution for social and environmental problems
+            in Palu and beyond. By supporting aspiring social entrepreneurs with
+            capacity building programs and connecting them with pertinent
+            stakeholders to achieve a greater impact.
           </p>
         </div>
-        <div className="mx-10">
-          <Image src={aboutFrame} alt="about frame" height={400}/>
+        <div className="md:mx-10">
+          <Image src={aboutFrame} alt="about frame"  />
         </div>
       </div>
     </section>
