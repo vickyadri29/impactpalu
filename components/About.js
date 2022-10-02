@@ -1,4 +1,6 @@
 import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 // Import image/icon
 import pointerLeft from "../assets/pointerLeft.svg";
