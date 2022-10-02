@@ -33,12 +33,12 @@ const Footer = () => {
             </h3>
             <div className="flex gap-3">
               <Link href="https://www.instagram.com/impactpalu/">
-                <a target={"_blank"}>
+                <a target={"_blank"} rel="noreferrer">
                   <Image src={instagram} alt="instagram" width={35} />
                 </a>
               </Link>
               <Link href="https://www.linkedin.com/company/impact-palu/">
-                <a target={"_blank"}>
+                <a target={"_blank"} rel="noreferrer">
                   <Image src={linkedin} alt="linkedin" width={35} />
                 </a>
               </Link>
@@ -52,7 +52,7 @@ const Footer = () => {
           <p className="text-[#046F7D] md:text-base text-[10px]">
             Copyright 2022 © Impact Palu | Created by{" "}
             <Link href={"https://hammercode.org/"}>
-              <a target={"_blank"}>
+              <a target={"_blank"} rel="noreferrer">
                 <span className="font-semibold">HammerCode</span>
               </a>
             </Link>

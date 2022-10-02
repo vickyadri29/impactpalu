@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 // Import images/icons
 import pointerLeft from "../assets/pointerLeft.svg";
@@ -79,9 +80,13 @@ const Events = () => {
           })}
         </div>
         <div className="flex justify-center md:my-10 my-7">
-          <button className="bg-[#138B9B] font-semibold text-white md:px-8 px-5 md:py-3 py-2 md:text-base text-sm rounded-[5px]">
-            View for more
-          </button>
+          <Link href={"https://www.instagram.com/impactpalu/"}>
+            <a target={"_blank"} rel="noreferrer">
+              <button className="bg-[#138B9B] font-semibold text-white md:px-8 px-5 md:py-3 py-2 md:text-base text-sm rounded-[5px]">
+                View for more
+              </button>
+            </a>
+          </Link>
         </div>
       </div>
     </section>
