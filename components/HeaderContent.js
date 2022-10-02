@@ -15,14 +15,14 @@ const HeaderContent = () => {
 
   return (
     <section className="header">
-      <div
-        data-aos="fade-up"
-        data-aos-duration="800"
-        className="bg-gradient-to-b from-[#046F7D] to-[#008FA2] md:pt-36 pt-20 md:pb-0 pb-5"
-      >
+      <div className="bg-gradient-to-b from-[#046F7D] to-[#008FA2] md:pt-36 pt-20 md:pb-0 pb-5">
         <div className="max-w-6xl m-auto md:py-10 px-5">
           <div className="flex md:flex-row flex-col md:justify-between items-center">
-            <div className="md:my-0 my-5 flex flex-col items-center justify-center gap-4 basis-1/2 text-white">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="800"
+              className="md:my-0 my-5 flex flex-col items-center justify-center gap-4 basis-1/2 text-white"
+            >
               <h2 className="md:text-[60px] text-[34px] md:text-left text-center font-semibold">
                 Sustaining Local Change .
               </h2>
@@ -31,7 +31,7 @@ const HeaderContent = () => {
                 and beyond .
               </p>
             </div>
-            <div className="">
+            <div data-aos="fade-up" data-aos-duration="800" className="">
               <Image
                 src={imageFrame}
                 alt="Image Frame"
@@ -41,7 +41,11 @@ const HeaderContent = () => {
             </div>
           </div>
           <Link to="about" smooth={true} duration={500}>
-            <button className="flex md:items-center md:m-0 m-auto gap-1 mt-10">
+            <button
+              data-aos="fade-up"
+              data-aos-duration="800"
+              className="flex md:items-center md:m-0 m-auto gap-1 mt-10"
+            >
               <Image src={scrollDownIcon} alt="scroll down icon" />
               <p className="text-white md:text-base text-xs">
                 scroll down to explore
