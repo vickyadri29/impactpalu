@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -90,9 +91,13 @@ const Programs = () => {
                     </li>
                   </ul>
                   <div className="flex md:justify-end justify-center md:mr-6">
-                    <button className="bg-[#046F7D] hover:bg-[#046370] text-white md:px-6 px-3 py-2 font-medium md:text-sm text-[13px] rounded-[5px] transition-all ease-in duration-200">
-                      Apply Now
-                    </button>
+                    <Link href={"http://bit.ly/impactincubationform"}>
+                      <a target={"_blank"}>
+                        <button className="bg-[#046F7D] hover:bg-[#046370] text-white md:px-6 px-3 py-2 font-medium md:text-sm text-[13px] rounded-[5px] transition-all ease-in duration-200">
+                          Apply Now
+                        </button>
+                      </a>
+                    </Link>
                   </div>
                 </div>
               ) : null}
@@ -152,9 +157,13 @@ const Programs = () => {
                     </li>
                   </ul>
                   <div className="flex md:justify-end justify-center md:mr-6">
-                    <button className="bg-[#046F7D] hover:bg-[#046370] text-white md:px-6 px-3 py-2 font-medium md:text-sm text-[13px] rounded-[5px] transition-all ease-in duration-200">
-                      Apply Now
-                    </button>
+                    <Link href={"http://bit.ly/impactincubationform"}>
+                      <a target={"_blank"}>
+                        <button className="bg-[#046F7D] hover:bg-[#046370] text-white md:px-6 px-3 py-2 font-medium md:text-sm text-[13px] rounded-[5px] transition-all ease-in duration-200">
+                          Apply Now
+                        </button>
+                      </a>
+                    </Link>
                   </div>
                 </div>
               ) : null}

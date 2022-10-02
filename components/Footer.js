@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 // Import Images/Icons
 import logo1 from "../assets/footer/logo1.svg";
@@ -31,8 +32,16 @@ const Footer = () => {
               Social Media
             </h3>
             <div className="flex gap-3">
-              <Image src={instagram} alt="instagram" width={35} />
-              <Image src={linkedin} alt="linkedin" width={35} />
+              <Link href="https://www.instagram.com/impactpalu/">
+                <a target={"_blank"}>
+                  <Image src={instagram} alt="instagram" width={35} />
+                </a>
+              </Link>
+              <Link href="https://www.linkedin.com/company/impact-palu/">
+                <a target={"_blank"}>
+                  <Image src={linkedin} alt="linkedin" width={35} />
+                </a>
+              </Link>
             </div>
           </div>
         </div>
