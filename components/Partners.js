@@ -1,12 +1,15 @@
 import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import { useEffect } from "react";
+import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
-import Image from "next/image";
 
 // Import images/icons
 import pointerLeft from "../assets/pointerLeft.svg";
@@ -17,10 +20,18 @@ import { DataPartners } from "../data";
 const Partners = () => {
   const { datas } = DataPartners;
 
+  useEffect(() => {
+    AOS.init({});
+  }, []);
+
   return (
     <section className="partners">
       <div className="max-w-5xl m-auto p-5">
-        <div className="flex flex-col gap-3">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="800"
+          className="flex flex-col gap-3"
+        >
           <div className="flex justify-center gap-3">
             <Image src={pointerLeft} alt="pointer left" width={20} />
             <h2 className="font-semibold md:text-[45px] text-[28px] text-[#046F7D]">
@@ -32,7 +43,11 @@ const Partners = () => {
             Here is our partners and supporters
           </p>
         </div>
-        <div className="flex justify-center m-auto">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="800"
+          className="flex justify-center m-auto"
+        >
           <Swiper
             modules={[Navigation, Pagination]}
             navigation={true}

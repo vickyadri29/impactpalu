@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 // Import Image/icon
 import pointerLeft from "../assets/pointerLeft.svg";
@@ -24,13 +26,21 @@ const Programs = () => {
     setShowImpact((show) => !show);
   };
 
+  useEffect(() => {
+    AOS.init({});
+  }, []);
+
   return (
     <section className="programs">
       <div className="relative top-2">
         <Image src={waveProgram} alt="wave" />
       </div>
       <div className="bg-[#ECFEFF] text-[#2A2B30]">
-        <div className="max-w-6xl m-auto px-5 md:pt-5 md:py-0 py-5">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="800"
+          className="max-w-6xl m-auto px-5 md:pt-5 md:py-0 py-5"
+        >
           <div className="flex justify-center gap-3">
             <Image src={pointerLeft} alt="pointer left" width={20} />
             <h2 className="font-semibold md:text-[45px] text-[28px] text-[#046F7D]">

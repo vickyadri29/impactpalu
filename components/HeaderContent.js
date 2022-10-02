@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -6,7 +7,6 @@ import { Link } from "react-scroll";
 import imageFrame from "../assets/header/imageFrame.svg";
 import scrollDownIcon from "../assets/header/scrollDownIcon.svg";
 import waveHeader from "../assets/header/waveHeader.svg";
-import { useEffect } from "react";
 
 const HeaderContent = () => {
   useEffect(() => {
