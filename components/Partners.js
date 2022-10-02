@@ -49,8 +49,8 @@ const Partners = () => {
           className="flex justify-center m-auto"
         >
           <Swiper
-            modules={[Navigation, Pagination]}
-            navigation={true}
+            modules={[ Pagination]}
+            // navigation={true}
             pagination={true}
             loop={true}
             //   className="test"
