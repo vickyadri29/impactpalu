@@ -51,7 +51,11 @@ const Footer = () => {
         <div className="flex justify-between items-center gap-5">
           <p className="text-[#046F7D] md:text-base text-[10px]">
             Copyright 2022 © Impact Palu | Created by{" "}
-            <span className="font-semibold">HammerCode</span>
+            <Link href={"https://hammercode.org/"}>
+              <a target={"_blank"}>
+                <span className="font-semibold">HammerCode</span>
+              </a>
+            </Link>
           </p>
           <div className="md:w-20 w-10">
             <Image src={logo2} alt="logo" />
