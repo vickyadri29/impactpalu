@@ -11,9 +11,9 @@ import { DataEvents } from "../data";
 import { useState } from "react";
 
 const Events = () => {
-  const [eventPassed, setEventPassed] = useState(false);
-
+  // const [eventPassed, setEventPassed] = useState(false); // disable
   const { datas } = DataEvents;
+
   return (
     <section className="events bg-[#F9FFFF]">
       <div className="max-w-6xl m-auto p-5">
@@ -34,6 +34,8 @@ const Events = () => {
               time,
               zoom_desc,
               register_desc,
+              url_events,
+              passed,
             } = data;
             return (
               <div
@@ -61,11 +63,20 @@ const Events = () => {
                       </div>
                       <span className="font-bold">{zoom_desc}</span>
                     </div>
-                    {eventPassed ? (
-                      <div className="flex items-center gap-2">
-                        <span className="font-bold">{register_desc}</span>
-                        <Image src={arrowIcon} alt="arrow" />
-                      </div>
+                    {passed ? (
+                      <div>
+                        <Link href={url_events}>
+                          <a target={"_blank"} rel="noreferrer">
+                            <button className="bg-[#139b59] text-white md:font-bold font-semibold md:px-7 px-4 py-2 md:text-base text-xs rounded-[5px] shadow-md">
+                              {register_desc}
+                            </button>
+                          </a>
+                        </Link>
+                    </div>
+                      // <div className="flex items-center gap-2">
+                      //   <span className="font-bold">{register_desc}</span>
+                      //   <Image src={arrowIcon} alt="arrow" />
+                      // </div>
                     ) : (
                       <div>
                         <div className="bg-[#EB3C3C] text-white md:font-bold font-semibold md:px-7 px-4 py-2 md:text-base text-xs rounded-[5px] shadow-md">

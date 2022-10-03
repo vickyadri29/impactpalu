@@ -22,7 +22,9 @@ export const DataEvents = {
       date: "Jum’at 21 agustus 2021",
       time: "04.30 pm - 06.00 pm (WITA)",
       zoom_desc: "Via Zoom",
-      register_desc: "Register now",
+      register_desc: "Check Events",
+      url_events: "https://www.instagram.com/p/CgthJeePLXl",
+      passed: false,
     },
     {
       id: 2,
@@ -32,7 +34,9 @@ export const DataEvents = {
       date: "Jum’at 21 agustus 2021",
       time: "04.30 pm - 06.00 pm (WITA)",
       zoom_desc: "Via Zoom",
-      register_desc: "Register now",
+      register_desc: "Check Events",
+      url_events: "https://www.instagram.com/p/CgthJeePLXl",
+      passed: true,
     },
   ],
 };
